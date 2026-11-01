@@ -1,0 +1,7 @@
+
+
+services:
+  airflow-worker:
+    volumes:
+      - ../../data-lake/local:/opt/airflow/datalake-local
+      - ../../data-lake:/opt/airflow/datalake-project

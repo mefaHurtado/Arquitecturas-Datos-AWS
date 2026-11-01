@@ -1,0 +1,31 @@
+# Credenciales y configuraciones privadas
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.ssh/
+
+# Datos generados localmente
+**/local/
+**/logs/
+*.sqlite
+*.db
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Archivos temporales
+*.zip
+*:Zone.Identifier
+.DS_Store
+
+# Configuracion local de Airflow
+infrastructure/airflow-local/config/airflow.cfg
+
+# Paquete temporal de cierre
+data-lake/cierre_datalake/

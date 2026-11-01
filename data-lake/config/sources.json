@@ -1,0 +1,23 @@
+
+{
+  "feeds": [
+    {
+      "source_id": "eltiempo_colombia",
+      "medio": "El Tiempo",
+      "seccion": "Colombia",
+      "url": "https://www.eltiempo.com/rss/colombia.xml"
+    },
+    {
+      "source_id": "eltiempo_economia",
+      "medio": "El Tiempo",
+      "seccion": "Economía",
+      "url": "https://www.eltiempo.com/rss/economia.xml"
+    },
+    {
+      "source_id": "eltiempo_tecnologia",
+      "medio": "El Tiempo",
+      "seccion": "Tecnología",
+      "url": "https://www.eltiempo.com/rss/tecnosfera.xml"
+    }
+  ]
+}
