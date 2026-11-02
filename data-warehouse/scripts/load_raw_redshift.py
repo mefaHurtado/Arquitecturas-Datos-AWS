@@ -53,7 +53,7 @@ for entidad, esperado in ENTIDADES.items():
     if f"{entidad}.manifest" not in comandos[entidad]:
         raise SystemExit(f"Manifiesto incorrecto: {entidad}")
 
-    if "IAM_ROLE 'default'" not in comandos[entidad]:
+    if "IAM_ROLE default" not in comandos[entidad]:
         raise SystemExit(f"Revisar IAM_ROLE: {entidad}")
 
     with archivo.open(encoding="utf-8", newline="") as f:
