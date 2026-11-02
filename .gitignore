@@ -29,3 +29,6 @@ infrastructure/airflow-local/config/airflow.cfg
 
 # Paquete temporal de cierre
 data-lake/cierre_datalake/
+
+__pycache__/
+*.pyc

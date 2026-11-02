@@ -57,7 +57,7 @@ for archivo in "${ARCHIVOS[@]}"; do
           --server-side-encryption AES256 \
           --if-none-match "*" \
           --region us-east-1 \
-          --output none
+          --output json
     fi
 done
 

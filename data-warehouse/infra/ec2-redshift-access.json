@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "secretsmanager:GetSecretValue",
+      "Resource": "arn:aws:secretsmanager:us-east-1:802655955683:secret:redshift!stefany-dw-ns-admin-nVxXII"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "redshift-serverless:GetNamespace",
+        "redshift-serverless:GetWorkgroup"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

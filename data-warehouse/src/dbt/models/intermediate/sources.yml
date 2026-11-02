@@ -1,15 +1,19 @@
 version: 2
 
 sources:
-  - name: mysql_raw
-    schema: raw
-    tables:
-      - name: mysql_customers
-      - name: mysql_products
-      - name: mysql_orders
-      - name: mysql_order_items
-  - name: mongodb_raw
-    schema: raw
-    tables:
-      - name: mongo_reviews
-      - name: mongo_navigation_events
+- name: mysql_raw
+  schema: raw
+  tables:
+  - name: mysql_customers
+  - name: mysql_products
+  - name: mysql_orders
+  - name: mysql_order_items
+  quoting:
+    schema: true
+- name: mongodb_raw
+  schema: raw
+  tables:
+  - name: mongo_reviews
+  - name: mongo_navigation_events
+  quoting:
+    schema: true

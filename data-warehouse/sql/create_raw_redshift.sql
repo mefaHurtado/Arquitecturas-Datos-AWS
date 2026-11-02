@@ -2,13 +2,13 @@
 -- DATA WAREHOUSE EIA
 -- Preparacion de esquemas y tablas RAW para Redshift
 
-CREATE SCHEMA IF NOT EXISTS raw;
+CREATE SCHEMA IF NOT EXISTS "raw";
 CREATE SCHEMA IF NOT EXISTS intermediate;
 CREATE SCHEMA IF NOT EXISTS quarantine;
 CREATE SCHEMA IF NOT EXISTS marts;
 
 -- MYSQL: CLIENTES
-CREATE TABLE IF NOT EXISTS raw.mysql_customers (
+CREATE TABLE IF NOT EXISTS "raw".mysql_customers (
     customer_id BIGINT,
     name VARCHAR(160),
     email VARCHAR(254),
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS raw.mysql_customers (
 );
 
 -- MYSQL: PRODUCTOS
-CREATE TABLE IF NOT EXISTS raw.mysql_products (
+CREATE TABLE IF NOT EXISTS "raw".mysql_products (
     product_id BIGINT,
     name VARCHAR(180),
     category VARCHAR(80),
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS raw.mysql_products (
 );
 
 -- MYSQL: PEDIDOS
-CREATE TABLE IF NOT EXISTS raw.mysql_orders (
+CREATE TABLE IF NOT EXISTS "raw".mysql_orders (
     order_id BIGINT,
     customer_id BIGINT,
     order_date TIMESTAMP,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS raw.mysql_orders (
 );
 
 -- MYSQL: DETALLES DE PEDIDOS
-CREATE TABLE IF NOT EXISTS raw.mysql_order_items (
+CREATE TABLE IF NOT EXISTS "raw".mysql_order_items (
     order_item_id BIGINT,
     order_id BIGINT,
     product_id BIGINT,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS raw.mysql_order_items (
 );
 
 -- MONGODB: RESEÑAS
-CREATE TABLE IF NOT EXISTS raw.mongo_reviews (
+CREATE TABLE IF NOT EXISTS "raw".mongo_reviews (
     review_id BIGINT,
     customer_id BIGINT,
     product_id BIGINT,
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS raw.mongo_reviews (
 );
 
 -- MONGODB: EVENTOS DE NAVEGACION
-CREATE TABLE IF NOT EXISTS raw.mongo_navigation_events (
+CREATE TABLE IF NOT EXISTS "raw".mongo_navigation_events (
     event_id BIGINT,
     event_type VARCHAR(100),
     occurred_at TIMESTAMPTZ,

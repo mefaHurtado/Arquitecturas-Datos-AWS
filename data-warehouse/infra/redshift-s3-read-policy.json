@@ -1,0 +1,28 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ListDataWarehouseFiles",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Resource": "arn:aws:s3:::stefany-redshift-taller-2026",
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": [
+            "data-warehouse/*"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "ReadDataWarehouseFiles",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": "arn:aws:s3:::stefany-redshift-taller-2026/data-warehouse/*"
+    }
+  ]
+}

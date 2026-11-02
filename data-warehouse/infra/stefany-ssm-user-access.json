@@ -1,0 +1,46 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ssm:StartSession"
+      ],
+      "Resource": [
+        "arn:aws:ec2:us-east-1:802655955683:instance/i-0989e5c2a560e5b31",
+        "arn:aws:ssm:us-east-1:802655955683:document/SSM-SessionManagerRunShell"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ssm:DescribeInstanceInformation",
+        "ssm:DescribeInstanceProperties",
+        "ssm:GetConnectionStatus",
+        "ssm:GetServiceSetting",
+        "ssm:DescribeSessions",
+        "ec2:DescribeInstances"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ssmmessages:OpenDataChannel"
+      ],
+      "Resource": [
+        "arn:aws:ssm:us-east-1:802655955683:session/${aws:userid}-*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ssm:TerminateSession",
+        "ssm:ResumeSession"
+      ],
+      "Resource": [
+        "arn:aws:ssm:us-east-1:802655955683:session/${aws:userid}-*"
+      ]
+    }
+  ]
+}
