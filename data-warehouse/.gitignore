@@ -1,0 +1,29 @@
+# Credenciales
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+env_file
+**/env_file
+**/profiles.yml
+**/.user.yml
+
+# Archivos temporales
+**/__pycache__/
+**/*.pyc
+**/dbt_packages/
+**/target/
+**/logs/
+
+# Bases de datos locales
+warehouse/
+*.duckdb
+*.duckdb.*
+
+# Claves privadas
+*.pem
+*.key
+*.p12
+*.pfx
